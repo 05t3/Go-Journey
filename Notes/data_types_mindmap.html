@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.2.0/dist/style.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@6.7.0"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.2.7"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.2.0/dist/index.umd.min.js"></script><script>(r => {
+                setTimeout(r);
+              })(() => {
+  const {
+    markmap,
+    mm
+  } = window;
+  const toolbar = new markmap.Toolbar();
+  toolbar.attach(mm);
+  const el = toolbar.render();
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, data) => {
+        const {
+          Markmap
+        } = getMarkmap();
+        window.mm = Markmap.create('svg#mindmap', getOptions == null ? void 0 : getOptions(), data);
+      })(() => window.markmap,null,{"t":"root","d":0,"v":"","c":[{"t":"heading","d":1,"p":{"lines":[0,1]},"v":"Data Types","c":[{"t":"list_item","d":3,"p":{"lines":[4,5],"index":1},"v":"1. Basic Types"},{"t":"list_item","d":3,"p":{"lines":[5,6],"index":2},"v":"2. Composite Types"}]},{"t":"heading","d":1,"p":{"lines":[7,8]},"v":"1. Basic Types","c":[{"t":"heading","d":2,"p":{"lines":[9,10]},"v":"Integers","c":[{"t":"heading","d":3,"p":{"lines":[11,12]},"v":"Signed","c":[{"t":"heading","d":4,"p":{"lines":[13,14]},"v":"int"},{"t":"heading","d":4,"p":{"lines":[15,16]},"v":"int8"},{"t":"heading","d":4,"p":{"lines":[17,18]},"v":"int16"},{"t":"heading","d":4,"p":{"lines":[19,20]},"v":"int32"},{"t":"heading","d":4,"p":{"lines":[21,22]},"v":"int64"}]},{"t":"heading","d":3,"p":{"lines":[23,24]},"v":"Unsigned","c":[{"t":"heading","d":4,"p":{"lines":[25,26]},"v":"uint"},{"t":"heading","d":4,"p":{"lines":[27,28]},"v":"uint8"},{"t":"heading","d":4,"p":{"lines":[29,30]},"v":"uint16"},{"t":"heading","d":4,"p":{"lines":[31,32]},"v":"uint32"},{"t":"heading","d":4,"p":{"lines":[33,34]},"v":"uint64"},{"t":"heading","d":4,"p":{"lines":[35,36]},"v":"uintptr"}]},{"t":"heading","d":3,"p":{"lines":[37,38]},"v":"Floats","c":[{"t":"heading","d":4,"p":{"lines":[39,40]},"v":"float32"},{"t":"heading","d":4,"p":{"lines":[41,42]},"v":"float64"}]},{"t":"heading","d":3,"p":{"lines":[43,44]},"v":"Complex Numbers","c":[{"t":"heading","d":4,"p":{"lines":[45,46]},"v":"complex64"},{"t":"heading","d":4,"p":{"lines":[47,48]},"v":"complex128"}]},{"t":"heading","d":3,"p":{"lines":[49,50]},"v":"Byte"},{"t":"heading","d":3,"p":{"lines":[51,52]},"v":"Rune"},{"t":"heading","d":3,"p":{"lines":[53,54]},"v":"String"},{"t":"heading","d":3,"p":{"lines":[55,56]},"v":"Boolean"}]}]},{"t":"heading","d":1,"p":{"lines":[57,58]},"v":"2. Composite Types","c":[{"t":"heading","d":2,"p":{"lines":[59,60]},"v":"Collection/Aggregation or Non-Reference Types","c":[{"t":"heading","d":3,"p":{"lines":[61,62]},"v":"Arrays"},{"t":"heading","d":3,"p":{"lines":[63,64]},"v":"Structs"}]},{"t":"heading","d":2,"p":{"lines":[65,66]},"v":"Reference Types","c":[{"t":"heading","d":3,"p":{"lines":[67,68]},"v":"Slices"},{"t":"heading","d":3,"p":{"lines":[69,70]},"v":"Maps"},{"t":"heading","d":3,"p":{"lines":[71,72]},"v":"Channels"},{"t":"heading","d":3,"p":{"lines":[73,74]},"v":"Pointers"},{"t":"heading","d":3,"p":{"lines":[75,76]},"v":"Function/Methods"}]},{"t":"heading","d":2,"p":{"lines":[77,78]},"v":"Interface","c":[{"t":"heading","d":3,"p":{"lines":[79,80]},"v":"Special case of empty Interface"}]}]}],"p":{}})</script>
+</body>
+</html>
